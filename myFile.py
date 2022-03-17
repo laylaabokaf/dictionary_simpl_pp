@@ -3,10 +3,9 @@ import json
 
 
 def Search_and_get_Difnition(word,data):
-    definition = ""
     if word in data:
-        definition = data[word][0]
-        print("' " + definition + " '\n")
+        for defin in data[word] :
+          print("' " + defin + " '\n")
     else:
         print("sorry we didn't find a definition for " + word + " try another one \n")
 
