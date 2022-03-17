@@ -4,14 +4,12 @@ import json
 
 def Search_and_get_Difnition(word,data):
     definition = ""
-    for item in data :
-        if(item == word):
-            definition = data[item][0]
-            break
-    if(definition == ""):
-       print("sorry we didn't find a definition for " + word + " try another one \n")
+    if word in data:
+        definition = data[word][0]
+        print("' " + definition + " '\n")
     else:
-       print("' " + definition +" '\n")
+        print("sorry we didn't find a definition for " + word + " try another one \n")
+
 
 
 
